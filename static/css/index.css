@@ -113,7 +113,10 @@ body {
 .results-carousel {
   overflow: hidden;
 }
-
+.carousel {
+  width: 110%;
+  height: 110%;
+}
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
