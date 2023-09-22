@@ -1,4 +1,3 @@
-# DFC
 # Fb2221.github.io
 
 This is the repository that contains source code for the [DFC website](https://Fb2221.github.io).
