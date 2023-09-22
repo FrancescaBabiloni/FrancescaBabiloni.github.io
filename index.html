@@ -120,6 +120,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
+              QUESTI LINK SONO DA AGGIUSTARE TUTTI
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -137,6 +138,16 @@
                   </span>
                   <span>arXiv</span>
                 </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://youtube.com"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
               </span>
               <!-- Code Link. -->
               <span class="link-block">
@@ -249,31 +260,34 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            The success of deep learning models on structured data has generated significant 
+            interest in extending their application to non-Euclidean domains. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            In this work, we introduce a novel intrinsic operator suitable for representation learning on 3D meshes.
+            Our operator is specifically tailored to adapt its behavior to the irregular 
+            structure of the underlying graph and effectively utilize its long-range dependencies, 
+            while at the same time ensuring computational efficiency and ease of optimization.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            In particular, inspired by the framework of Spiral Convolution, which extracts and 
+            transforms the vertices in the 3D mesh following a local spiral ordering, we propose 
+            a general operator that dynamically adjusts the length of the spiral trajectory and the 
+            parameters of the transformation for each processed vertex and mesh. 
+          </p>
+          <p>
+            Then, we use polyadic decomposition to factorize its dense weight tensor into a sequence 
+            of lighter linear layers that separately process features and vertices information, hence 
+            significantly reducing the computational complexity without introducing any stringent inductive biases. 
+            Notably, we leverage dynamic gating to achieve spatial adaptivity and induce global reasoning 
+            with constant time complexity benefitting from an efficient dynamic pooling mechanism based 
+            on Summed-Area-tables. 
+          </p>
+          <p>
+            Used as a drop-in replacement on existing architectures for shape 
+            correspondence our operator significantly improves the performance-efficiency trade-off, 
+            and in 3D shape generation with morphable models achieves state-of-the-art performance with 
+            a three-fold reduction in the number of parameters required.
           </p>
         </div>
       </div>
