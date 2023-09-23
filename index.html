@@ -251,7 +251,7 @@
   shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
 
 
-<model-viewer id="model" style="width: 500px; height: 500px;" src="./static/meshes/placeholder.glb" camera-controls poster="poster.webp" shadow-intensity="1" auto-rotate min-camera-orbit="-45deg 90deg auto" max-camera-orbit="45deg 90deg auto" camera-orbit="0deg 90deg auto" field-of-view="30deg" interaction-prompt="none">
+<model-viewer id="model" style="width: 300px; height: 300px;" src="./static/meshes/placeholder.glb" camera-controls poster="poster.webp" shadow-intensity="1" auto-rotate min-camera-orbit="-45deg 90deg auto" max-camera-orbit="45deg 90deg auto" camera-orbit="0deg 90deg auto" field-of-view="30deg" interaction-prompt="none">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
@@ -261,7 +261,7 @@
     const modelViewer = document.querySelector('#model');
 
     let rotation = 0; // start at 0 degrees
-    const minRotation = -45; // lower limit is -45 degrees
+    const minRotation = -50; // lower limit is -45 degrees
     const maxRotation = 45; // upper limit is 45 degrees
     const rotationSpeed = 120 / 60; // 120 degrees per second
     let direction = 1;
