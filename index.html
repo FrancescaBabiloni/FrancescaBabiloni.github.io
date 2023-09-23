@@ -270,7 +270,7 @@
         if (rotation > maxRotation || rotation < minRotation) {
             direction *= -1;
         }
-        modelViewer.cameraOrbit = `${rotation}deg 90deg auto`;
+        modelViewer.cameraOrbit = `${rotation}deg 45deg auto`;
         requestAnimationFrame(updateModelRotation);
     };
 
