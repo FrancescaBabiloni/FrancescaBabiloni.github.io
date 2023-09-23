@@ -257,6 +257,24 @@
     </div>
 </model-viewer>
 
+<script>
+    const modelViewer = document.querySelector('#model');
+
+    let rotation = 0; // start at 0 degrees
+    const rotationSpeed = 120 / 60; // 120 degrees per second
+
+    const updateModelRotation = () => {
+        rotation += rotationSpeed;
+        if (rotation >= 360) {
+            rotation -= 360;
+        }
+        modelViewer.cameraOrbit = `${rotation}deg 90deg auto`;
+        requestAnimationFrame(updateModelRotation);
+    };
+
+    updateModelRotation();
+</script>
+
 
 
 
