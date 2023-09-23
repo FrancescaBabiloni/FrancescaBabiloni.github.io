@@ -259,9 +259,9 @@
 <script>
     const modelViewer = document.querySelector('#model');
 
-    let rotation = 0;
-    const minRotation = -45;
-    const maxRotation = 45;
+    let rotation = 0; // start at 0 degrees
+    const minRotation = -45; // lower limit is -45 degrees
+    const maxRotation = 45; // upper limit is 45 degrees
     const rotationSpeed = 120 / 60; // 120 degrees per second
     let direction = 1;
 
@@ -278,7 +278,6 @@
 
     updateModelRotation();
 </script>
-
 
 
 
