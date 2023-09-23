@@ -1,7 +1,7 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
-var INTERP_BASE2 = "./static/interpolation2/stacked"; // New path
+var INTERP_BASE2 = "./static/interpolation/stacked2"; // New path
 var NUM_INTERP_FRAMES = 240;
 
 var interp_images = [];
