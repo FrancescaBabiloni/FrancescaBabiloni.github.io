@@ -1,24 +1,35 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
+var INTERP_BASE2 = "./static/interpolation2/stacked"; // New path
 var NUM_INTERP_FRAMES = 240;
 
 var interp_images = [];
+var interp_images2 = []; // New array for new images
+
 function preloadInterpolationImages() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
     var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
     interp_images[i] = new Image();
     interp_images[i].src = path;
+
+    var path2 = INTERP_BASE2 + '/' + String(i).padStart(6, '0') + '.jpg'; // New path
+    interp_images2[i] = new Image(); // New images
+    interp_images2[i].src = path2; // New path
   }
 }
 
-function setInterpolationImage(i) {
-  var image = interp_images[i];
+function setInterpolationImage(i, id) {
+  var image;
+  if (id === 'interpolation-image-wrapper') {
+    image = interp_images[i];
+  } else if (id === 'interpolation-image-wrapper2') {
+    image = interp_images2[i];
+  }
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
+  $('#' + id).empty().append(image);
 }
-
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
@@ -65,16 +76,21 @@ $(document).ready(function() {
         player.currentTime = player.duration / 100 * this.value;
       })
     }, false);*/
+
     preloadInterpolationImages();
 
     $('#interpolation-slider').on('input', function(event) {
-      setInterpolationImage(this.value);
+      setInterpolationImage(this.value, 'interpolation-image-wrapper');
     });
-    setInterpolationImage(0);
+    setInterpolationImage(0, 'interpolation-image-wrapper');
+    
+    $('#interpolation-slider2').on('input', function(event) {
+      setInterpolationImage(this.value, 'interpolation-image-wrapper2');
+    });
+    setInterpolationImage(0, 'interpolation-image-wrapper2');
+
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+    $('#interpolation-slider2').prop('max', NUM_INTERP_FRAMES - 1); // New slider
 
     bulmaSlider.attach();
-
 })
-
-
