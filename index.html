@@ -176,7 +176,88 @@
   </div>
 </section>
  
-  <div class="slideshow-container">
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The success of deep learning models on structured data has generated significant 
+            interest in extending their application to non-Euclidean domains. 
+          </p>
+          <p>
+            In this work, we introduce a novel intrinsic operator suitable for representation learning on 3D meshes.
+            Our operator is specifically tailored to adapt its behavior to the irregular 
+            structure of the underlying graph and effectively utilize its long-range dependencies, 
+            while at the same time ensuring computational efficiency and ease of optimization.
+          </p>
+          <p>
+            In particular, inspired by the framework of Spiral Convolution, which extracts and 
+            transforms the vertices in the 3D mesh following a local spiral ordering, we propose 
+            a general operator that dynamically adjusts the length of the spiral trajectory and the 
+            parameters of the transformation for each processed vertex and mesh. 
+          </p>
+          <p>
+            Then, we use polyadic decomposition to factorize its dense weight tensor into a sequence 
+            of lighter linear layers that separately process features and vertices information, hence 
+            significantly reducing the computational complexity without introducing any stringent inductive biases. 
+            Notably, we leverage dynamic gating to achieve spatial adaptivity and induce global reasoning 
+            with constant time complexity benefitting from an efficient dynamic pooling mechanism based 
+            on Summed-Area-tables. 
+          </p>
+          <p>
+            Used as a drop-in replacement on existing architectures for shape 
+            correspondence our operator significantly improves the performance-efficiency trade-off, 
+            and in 3D shape generation with morphable models achieves state-of-the-art performance with 
+            a three-fold reduction in the number of parameters required.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  
+<!-- Import the component -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+<!-- Use it like any other HTML element -->
+<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" 
+  src="./static/meshes/placeholder.glb" 
+  poster="shared-assets/models/NeilArmstrong.webp" 
+  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
+
+
+
+
+
+
+
+<div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
@@ -239,77 +320,13 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+  
 
 
 
 
 
   
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            The success of deep learning models on structured data has generated significant 
-            interest in extending their application to non-Euclidean domains. 
-          </p>
-          <p>
-            In this work, we introduce a novel intrinsic operator suitable for representation learning on 3D meshes.
-            Our operator is specifically tailored to adapt its behavior to the irregular 
-            structure of the underlying graph and effectively utilize its long-range dependencies, 
-            while at the same time ensuring computational efficiency and ease of optimization.
-          </p>
-          <p>
-            In particular, inspired by the framework of Spiral Convolution, which extracts and 
-            transforms the vertices in the 3D mesh following a local spiral ordering, we propose 
-            a general operator that dynamically adjusts the length of the spiral trajectory and the 
-            parameters of the transformation for each processed vertex and mesh. 
-          </p>
-          <p>
-            Then, we use polyadic decomposition to factorize its dense weight tensor into a sequence 
-            of lighter linear layers that separately process features and vertices information, hence 
-            significantly reducing the computational complexity without introducing any stringent inductive biases. 
-            Notably, we leverage dynamic gating to achieve spatial adaptivity and induce global reasoning 
-            with constant time complexity benefitting from an efficient dynamic pooling mechanism based 
-            on Summed-Area-tables. 
-          </p>
-          <p>
-            Used as a drop-in replacement on existing architectures for shape 
-            correspondence our operator significantly improves the performance-efficiency trade-off, 
-            and in 3D shape generation with morphable models achieves state-of-the-art performance with 
-            a three-fold reduction in the number of parameters required.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-<!-- Import the component -->
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-
-<!-- Use it like any other HTML element -->
-<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" 
-  src="./static/meshes/placeholder.glb" 
-  poster="shared-assets/models/NeilArmstrong.webp" 
-  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-
 <section class="section">
   <div class="container is-max-desktop">
 
