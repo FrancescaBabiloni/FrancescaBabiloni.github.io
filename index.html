@@ -248,15 +248,33 @@
 <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" 
   src="./static/meshes/placeholder.glb" 
   poster="shared-assets/models/NeilArmstrong.webp" 
-  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer scale="8 8 8">
+  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
 
 
-<model-viewer src="./static/meshes/placeholder.glb" camera-controls poster="poster.webp" shadow-intensity="1" auto-rotate auto-rotate-speed="120" min-camera-orbit="-45deg 90deg auto" max-camera-orbit="45deg 90deg auto" camera-orbit="-90deg 85.82deg 5.161m" field-of-view="30deg" interaction-prompt="none" scale="2 2 2">
+<model-viewer src="./static/meshes/placeholder.glb" camera-controls poster="poster.webp" shadow-intensity="1" auto-rotate min-camera-orbit="-45deg 90deg auto" max-camera-orbit="45deg 90deg auto" camera-orbit="-90deg 85.82deg 5.161m" field-of-view="30deg" interaction-prompt="none">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
 </model-viewer>
+<script>
+    const modelViewer = document.querySelector('#model');
 
+    let rotation = 0;
+    const minRotation = -45;
+    const maxRotation = 45;
+    const rotationSpeed = 120 / 60; // 120 degrees per second
+
+    const updateModelRotation = () => {
+        rotation += rotationSpeed;
+        if (rotation > maxRotation) {
+            rotation = minRotation;
+        }
+        modelViewer.cameraOrbit = `${rotation}deg 90deg auto`;
+        requestAnimationFrame(updateModelRotation);
+    };
+
+    updateModelRotation();
+</script>
 
 
 
