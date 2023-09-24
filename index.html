@@ -309,49 +309,45 @@
   </div>
 
   <!-- Next and previous buttons for the first slideshow -->
-  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+  <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides1(1)">&#10095;</a>
 </div>
 <br>
 
 <!-- The dots/circles for the first slideshow -->
 <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1, 1)"></span>
-  <span class="dot" onclick="currentSlide(2, 1)"></span>
-  <span class="dot" onclick="currentSlide(3, 1)"></span>
+  <span class="dot" onclick="currentSlide1(1)"></span>
+  <span class="dot" onclick="currentSlide1(2)"></span>
+  <span class="dot" onclick="currentSlide1(3)"></span>
 </div>
 
 <!-- JavaScript for Slideshow 1 -->
 <script>
 let slideIndex1 = 1;
-showSlides(slideIndex1, 1);
+showSlides1(slideIndex1);
 
-function plusSlides(n, slideshowNumber) {
-  if (slideshowNumber === 1) {
-    showSlides(slideIndex1 += n, 1);
-  }
+function plusSlides1(n) {
+  showSlides1(slideIndex1 += n);
 }
 
-function currentSlide(n, slideshowNumber) {
-  if (slideshowNumber === 1) {
-    showSlides(slideIndex1 = n, 1);
-  }
+function currentSlide1(n) {
+  showSlides1(slideIndex1 = n);
 }
 
-function showSlides(n, slideshowNumber) {
+function showSlides1(n) {
   let i;
-  let slides = document.querySelectorAll(`#slideshow-container-${slideshowNumber} .mySlides`);
-  let dots = document.querySelectorAll(`#slideshow-container-${slideshowNumber} .dot`);
-  if (n > slides.length) { n = 1 }
-  if (n < 1) { n = slides.length }
+  let slides = document.querySelectorAll("#slideshow-container-1 .mySlides");
+  let dots = document.querySelectorAll("#slideshow-container-1 .dot");
+  if (n > slides.length) { slideIndex1 = 1 }
+  if (n < 1) { slideIndex1 = slides.length }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[n - 1].style.display = "block";
-  dots[n - 1].className += " active";
+  slides[slideIndex1 - 1].style.display = "block";
+  dots[slideIndex1 - 1].className += " active";
 }
 </script>
 
@@ -370,48 +366,44 @@ function showSlides(n, slideshowNumber) {
   </div>
 
   <!-- Next and previous buttons for the second slideshow -->
-  <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+  <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides2(1)">&#10095;</a>
 </div>
 <br>
 
 <!-- The dots/circles for the second slideshow -->
 <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1, 2)"></span>
-  <span class="dot" onclick="currentSlide(2, 2)"></span>
+  <span class="dot" onclick="currentSlide2(1)"></span>
+  <span class="dot" onclick="currentSlide2(2)"></span>
 </div>
 
 <!-- JavaScript for Slideshow 2 -->
 <script>
 let slideIndex2 = 1;
-showSlides(slideIndex2, 2);
+showSlides2(slideIndex2);
 
-function plusSlides(n, slideshowNumber) {
-  if (slideshowNumber === 2) {
-    showSlides(slideIndex2 += n, 2);
-  }
+function plusSlides2(n) {
+  showSlides2(slideIndex2 += n);
 }
 
-function currentSlide(n, slideshowNumber) {
-  if (slideshowNumber === 2) {
-    showSlides(slideIndex2 = n, 2);
-  }
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
 }
 
-function showSlides(n, slideshowNumber) {
+function showSlides2(n) {
   let i;
-  let slides = document.querySelectorAll(`#slideshow-container-${slideshowNumber} .mySlides`);
-  let dots = document.querySelectorAll(`#slideshow-container-${slideshowNumber} .dot`);
-  if (n > slides.length) { n = 1 }
-  if (n < 1) { n = slides.length }
+  let slides = document.querySelectorAll("#slideshow-container-2 .mySlides");
+  let dots = document.querySelectorAll("#slideshow-container-2 .dot");
+  if (n > slides.length) { slideIndex2 = 1 }
+  if (n < 1) { slideIndex2 = slides.length }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[n - 1].style.display = "block";
-  dots[n - 1].className += " active";
+  slides[slideIndex2 - 1].style.display = "block";
+  dots[slideIndex2 - 1].className += " active";
 }
 </script>
 
