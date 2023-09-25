@@ -41,8 +41,6 @@
 </head>
 <body>
 
-
-<!-- THIS IS THE HOME BUTTON AND DROPDOWN MENU WITH THE LINKS TO RELATED PAPERS FROM SAME AUTHORS (IT IS COMMENTED) -->
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -67,6 +65,9 @@
           <a class="navbar-item" href="https://hypernerf.github.io">
             HyperNeRF
           </a>
+          <! -- 
+            to replace with THE OTHER PAPERRRRR!!!!!!
+          -->
             <a class="navbar-item" href="https://nerfies.github.io">
               Nerfies
             </a>
@@ -82,7 +83,6 @@
 
   </div>
 </nav>
- <!--END OF HOME BUTTON AND DROPDOWN MENU-->
 
 <section class="hero">
   <div class="hero-body">
@@ -115,10 +115,9 @@
             <span class="author-block"><sup>2</sup>Imperial College London</span>
           </div>
 
-      <!-- BUTTONS WITH 1)PDF LINK 2)ARXIVE LINK 3)VIDEO LINK 4)CODE LINK 5)DATA LINK -->
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!~~ PDF Link. ~~>
+              <!-- PDF Link. -->
               QUESTI LINK SONO DA AGGIUSTARE TUTTI
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
@@ -138,7 +137,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!~~ Video Link. ~~>
+              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://youtube.com"
                    class="external-link button is-normal is-rounded is-dark">
@@ -148,7 +147,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!~~ Code Link. ~~>
+              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/Fb2221/Fb2221.github.io"
                    class="external-link button is-normal is-rounded is-dark">
@@ -158,7 +157,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!~~ Dataset Link. ~~>
+              <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
@@ -170,7 +169,6 @@
             </div>
 
           </div>
-       <!-- BUTTONS WITH 1)PDF LINK 2)ARXIVE LINK 3)VIDEO LINK 4)CODE LINK 5)DATA LINK -->
         </div>
       </div>
     </div>
@@ -243,8 +241,8 @@
     <!--/ Abstract. -->
 
     <div class="center">
-        <img src="./static/images/paper/Block.png" alt="Image Description" style="display: block; margin-left: auto; margin-right: auto; width: 735px">
-        <p class="caption" style= "text-align:center">Caption for the image goes here.</p>
+        <img src="./static/images/paper/Block.png" alt="Image Description">
+        <p class="caption">Caption for the image goes here.</p>
     </div>
     
     
@@ -270,10 +268,10 @@
 
 
   
-<!-- MODELS SIDE BY SIDE
+<!-- Import the component -->
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 
- <div style="display: flex; justify-content: center; align-items: center; margin-top: -10px;">
+ <div style="display: flex; justify-content: center; align-items: center; margin-top: -10px;"> <!--  height: 100vh; -->
     <div style="display: flex; justify-content: space-between;">
         <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" 
           src="./static/meshes/color.glb" style="width: 300px; height: 300px;
@@ -288,8 +286,7 @@
         </model-viewer>
     </div>
 </div>
-  
-MODELS SIDE BY SIDE -->
+
 
 <div class="slideshow-container">
 
@@ -365,10 +362,9 @@ function showSlides(n) {
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- TWO COLUMNS CONTAINER
     <div class="columns is-centered">
-      
-    <!-- Visual Effects. -->
+
+      <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
@@ -401,8 +397,7 @@ function showSlides(n) {
       </div>
     </div>
     <!--/ Matting. -->
-TWO COLUMNS CONTAINER -->
-    
+
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -415,16 +410,17 @@ TWO COLUMNS CONTAINER -->
     Lorem ipsum dolor sit amet, consectetur adipiscing elit...
   </p>
 </div>
-<div class="columns is-vcentered interpolation-panel" style="width: 769px; margin: 0 auto;">
+<div class="columns is-vcentered interpolation-panel" display: flex>
   <!-- Original Images -->
   <div class="column is-3 has-text-centered">
-    <img src="./static/images/interpolate_start.jpg" style="width: 175px;"
+    <img src="./static/images/interpolate_start.jpg" style="width: 286.46px"
          class="interpolation-image"
          alt="Interpolate start reference image."/>
     <p>Mouth Extreme</p>
   </div>
-  <div class="column interpolation-video-column"> 
-    <div id="interpolation-image-wrapper" style="width: 175px;margin-left: 30px;margin-right: 30px;">      
+  <div class="column interpolation-video-column" style="
+    height: 67.5vh;"> 
+    <div id="interpolation-image-wrapper" style="width: 286.46px;">
       Loading...
     </div>
     <input class="slider is-fullwidth is-large is-info"
@@ -432,7 +428,7 @@ TWO COLUMNS CONTAINER -->
            step="1" min="0" max="100" value="0" type="range">
   </div>
   <div class="column is-3 has-text-centered">
-    <img src="./static/images/interpolate_end.jpg" style="width: 175px"
+    <img src="./static/images/interpolate_end.jpg" style="width: 286.46px"
          class="interpolation-image"
          alt="Interpolation end reference image."/>
     <p class="is-bold">Cheeks In</p>
@@ -440,15 +436,16 @@ TWO COLUMNS CONTAINER -->
 </div>
 
 <!-- New Images -->
-<div class="columns is-vcentered interpolation-panel"style="width: 769px; margin: 0 auto;">
+<div class="columns is-vcentered interpolation-panel">
   <div class="column is-3 has-text-centered">
-    <img src="./static/images/interpolate_start2.jpg" style="width: 175px;"
+    <img src="./static/images/interpolate_start2.jpg" style="width: 286.46px"
          class="interpolation-image"
          alt="Interpolate start reference image."/>
     <p>Eyebrow</p>
   </div>
-  <div class="column interpolation-video-column">
-    <div id="interpolation-image-wrapper2" style="width: 175px;margin-left: 30px;margin-right: 30px;">
+  <div class="column interpolation-video-column" style="
+    height: 67.5vh;">
+    <div id="interpolation-image-wrapper2"style="width: 286.46px; margin-left: 10px;">
       Loading...
     </div>
     <input class="slider is-fullwidth is-large is-info"
@@ -456,7 +453,7 @@ TWO COLUMNS CONTAINER -->
            step="1" min="0" max="100" value="0" type="range">
   </div>
   <div class="column is-3 has-text-centered">
-    <img src="./static/images/interpolate_end2.jpg" style="width: 175px"
+    <img src="./static/images/interpolate_end2.jpg" style="width: 286.46px"
          class="interpolation-image"
          alt="Interpolation end reference image."/>
     <p class="is-bold">High Smile</p>
@@ -465,15 +462,16 @@ TWO COLUMNS CONTAINER -->
 
 
 <!-- New Images -->
-<div class="columns is-vcentered interpolation-panel"style="width: 769px; margin: 0 auto;">
+<div class="columns is-vcentered interpolation-panel">
   <div class="column is-3 has-text-centered">
-    <img src="./static/images/interpolate_start3.jpg" style="width: 175px;"
+    <img src="./static/images/interpolate_start3.jpg" style="width: 286.46px"
          class="interpolation-image"
          alt="Interpolate start reference image."/>
     <p>Bare Teeth</p>
   </div>
-  <div class="column interpolation-video-column">
-    <div id="interpolation-image-wrapper3" style="width: 175px;margin-left: 30px;margin-right: 30px;">
+  <div class="column interpolation-video-column" style="
+    height: 67.5vh;">
+    <div id="interpolation-image-wrapper3"style="width: 286.46px; margin-left: 10px;">
       Loading...
     </div>
     <input class="slider is-fullwidth is-large is-info"
@@ -481,7 +479,7 @@ TWO COLUMNS CONTAINER -->
            step="1" min="0" max="100" value="0" type="range">
   </div>
   <div class="column is-3 has-text-centered">
-    <img src="./static/images/interpolate_end3.jpg" style="width: 175px"
+    <img src="./static/images/interpolate_end3.jpg" style="width: 286.46px"
          class="interpolation-image"
          alt="Interpolation end reference image."/>
     <p class="is-bold">Mouth Down</p>
@@ -528,11 +526,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{babiloni2023adaptive,
+    <pre><code>@article{babiloni2023dfc,
   author    = {Babiloni, Francesca and Maggioni, Matteo and Tanay, Thomas and Deng, Jiankang and Leonardis, Ales and Zafeiriou, Stefanos},
   title     = {Adaptive Spiral Layers for Efficient 3D Representation Learning on Meshes},
   journal   = {ICCV},
-  year      = {2023},
+  year      = {2021},
 }</code></pre>
   </div>
 </section>
