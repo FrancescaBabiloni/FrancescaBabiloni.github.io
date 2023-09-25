@@ -530,11 +530,11 @@ TWO COLUMNS CONTAINER -->
     <h2 class="title is-3">Adaptive Weights</h2>
     <p>Plotting its kernels via t-SNE highlights their adaptive behavior. <strong>Kernels are Vertex-Adaptive</strong>: Weights processing the same vertex are grouped in distinct clusters. <strong>Kernels are Mesh-Adaptive</strong>: Inside each group, a different response can be identified for every mesh.</p>
      <div class="container" style= "display: flex; justify-content: center; width: 950px">
-        <figure class="image" style="margin-right: 10px;">
+        <figure class="image" style="margin-right: 10px; right: 50px;">
             <img src="./static/images/paper/CoMA_tsne_vertex_mesh_adaptive_weights_02.jpg" alt="Image 1">
             <figcaption style="text-align: center;">3D shape reconstruction with 3DMM</figcaption>
         </figure>
-        <figure class="image" style="margin-left: 10px;">
+        <figure class="image" style="margin-left: 10px; margin-top: 0px; right:70px;">
             <img src="./static/images/paper/CoMA_tsne_vertex_mesh_adaptive_weights_03.jpg" alt="Image 2">
             <figcaption style="text-align: center;">3D shape correspondence </figcaption>
         </figure>
@@ -564,7 +564,7 @@ TWO COLUMNS CONTAINER -->
             </div>
         </model-viewer>
 
-        <model-viewer id="model_3" style="height: 550px;" src="./static/meshes/faust_rf/body_spiral/body_spiral_repositioned.glb" camera-controls poster="poster.webp" shadow-intensity="1" min-camera-orbit="-180deg 90deg 4m" max-camera-orbit="180deg 90deg 4m" camera-orbit="0deg 0deg 4m" field-of-view="30deg" interaction-prompt="none">
+        <model-viewer id="model_3" style="height: 550px;" src="./static/meshes/faust_rf/body_spiral/body_spiral_repositioned.glb" camera-controls poster="poster.webp" shadow-intensity="1" min-camera-orbit="-180deg 90deg 4m" max-camera-orbit="180deg 90deg 4m" camera-orbit="0deg 0deg 4m" field-of-view="30deg"  min-field-of-view="30deg" interaction-prompt="none">
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
