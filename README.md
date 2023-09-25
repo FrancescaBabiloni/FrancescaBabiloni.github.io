@@ -4,7 +4,7 @@ This is the repository that contains source code for the [DFC website](https://F
 
 If you find DFC useful for your work please cite:
 ```
-@article{babiloni2023dfc
+@article{babiloni2023adaptive
   author    = {Babiloni, Francesca and Maggioni, Matteo and Tanay, Thomas and Deng, Jiankang and Leonardis, Ales and Zafeiriou, Stefanos},
   title     = {Adaptive Spiral Layers for Efficient 3D Representation Learning on Meshes},
   journal   = {ICCV},
