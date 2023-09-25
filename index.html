@@ -217,7 +217,7 @@
           <p>
             In this work, we introduce a novel intrinsic operator suitable for representation learning on 3D meshes.
             Our operator is specifically tailored to adapt its behavior to the irregular 
-            structure of the underlying graph and effectively utilize its long-range dependencies, 
+            structure of the underlying graph and effectively utilizes its long-range dependencies, 
             while at the same time ensuring computational efficiency and ease of optimization.
           </p>
           <p>
@@ -423,7 +423,7 @@ TWO COLUMNS CONTAINER -->
         <h3 class="title is-4">Interpolating Latent States</h3>
 <div class="content has-text-justified">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+    An Adaptive-Spiral 3D Morphable Model generates new realistic representations, and can transition from one expression to another via latent-space interpolation.
   </p>
 </div>
 <div class="columns is-vcentered interpolation-panel" style="width: 769px; margin: 0 auto;">
@@ -505,9 +505,11 @@ TWO COLUMNS CONTAINER -->
     </div>
     <!--/ Animation. -->
 
-
-
-    <div class="container" style= "display: flex;
+<section class="section" id="Adaptive_Weights">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Adaptive Weights</h2>
+    <p>Plotting its kernels via t-SNE highlights their adaptive behavior. \textbf{Kernels are Vertex-Adaptive}: Weights processing the same vertex are grouped in distinct clusters. \textbf{Kernels are Mesh-Adaptive}: Inside each group, a different response can be identified for every mesh.</p>
+     <div class="container" style= "display: flex;
             justify-content: center; width: 950px">
         <div class="image">
             <img src="./static/images/paper/CoMA_tsne_vertex_mesh_adaptive_weights_03.jpg" alt="Image 1">
@@ -516,6 +518,8 @@ TWO COLUMNS CONTAINER -->
             <img src="./static/images/paper/CoMA_tsne_vertex_mesh_adaptive_weights_03.jpg" alt="Image 2">
         </div>
     </div>
+  </div>
+</section>
 
 
   <div style="display: flex; justify-content: center; align-items: center; height: 600px"> <!--  height: 100vh; -->
