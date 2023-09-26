@@ -1,6 +1,6 @@
 # Fb2221.github.io
 
-This is the repository that contains source code for the [DFC website](https://Fb2221.github.io).
+This is the repository that contains source code for the [https://fb2221.github.io/](https://Fb2221.github.io).
 
 If you find DFC useful for your work please cite:
 ```
