@@ -1,6 +1,6 @@
-# Francescababiloni.github.io
+# FrancescaBabiloni.github.io
 
-This is the repository that contains source code for the [https://francescababiloni.github.io/](https://Francescababiloni.github.io).
+This is the repository that contains source code for the [https://FrancescaBabiloni.github.io/](https://FrancescaBabiloni.github.io).
 
 If you find DFC useful for your work please cite:
 ```
